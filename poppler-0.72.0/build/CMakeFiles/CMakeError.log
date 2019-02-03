@@ -1,0 +1,208 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dfdd2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dfdd2.dir/build.make CMakeFiles/cmTC_dfdd2.dir/build
+make[1] : on entre dans le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_dfdd2.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -std=c99 -D_DEFAULT_SOURCE    -o CMakeFiles/cmTC_dfdd2.dir/CheckSymbolExists.c.o   -c /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_dfdd2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfdd2.dir/link.txt --verbose=1
+/usr/bin/cc -std=c99 -D_DEFAULT_SOURCE     -rdynamic CMakeFiles/cmTC_dfdd2.dir/CheckSymbolExists.c.o  -o cmTC_dfdd2 
+CMakeFiles/cmTC_dfdd2.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x1b) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_dfdd2.dir/build.make:97: recipe for target 'cmTC_dfdd2' failed
+make[1]: *** [cmTC_dfdd2] Error 1
+make[1] : on quitte le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_dfdd2/fast' failed
+make: *** [cmTC_dfdd2/fast] Error 2
+
+File /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C++ SOURCE FILE Test ICONV_SECOND_ARGUMENT_IS_CONST failed with the following output:
+Change Dir: /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b6910/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b6910.dir/build.make CMakeFiles/cmTC_b6910.dir/build
+make[1] : on entre dans le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_b6910.dir/src.cxx.o
+/usr/bin/c++    -fno-exceptions -fno-check-new -fno-common -D_DEFAULT_SOURCE -DICONV_SECOND_ARGUMENT_IS_CONST   -o CMakeFiles/cmTC_b6910.dir/src.cxx.o -c /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/src.cxx:9:17: error: invalid conversion from ‘const char**’ to ‘char**’ [-fpermissive]
+     iconv(conv, &in, &ilen, &out, &olen);
+                 ^~~
+In file included from /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/src.cxx:2:0:
+/usr/include/iconv.h:42:15: note:   initializing argument 2 of ‘size_t iconv(iconv_t, char**, size_t*, char**, size_t*)’
+ extern size_t iconv (iconv_t __cd, char **__restrict __inbuf,
+               ^~~~~
+CMakeFiles/cmTC_b6910.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_b6910.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_b6910.dir/src.cxx.o] Error 1
+make[1] : on quitte le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_b6910/fast' failed
+make: *** [cmTC_b6910/fast] Error 2
+
+Source file was:
+
+  #include <iconv.h>
+  int main(){
+    iconv_t conv = 0;
+    const char* in = 0;
+    size_t ilen = 0;
+    char* out = 0;
+    size_t olen = 0;
+    iconv(conv, &in, &ilen, &out, &olen);
+    return 0;
+  }
+
+Determining if the function fseek64 exists failed with the following output:
+Change Dir: /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_84881/fast"
+/usr/bin/make -f CMakeFiles/cmTC_84881.dir/build.make CMakeFiles/cmTC_84881.dir/build
+make[1] : on entre dans le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_84881.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -Wall -std=c99 -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=fseek64   -o CMakeFiles/cmTC_84881.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_84881
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84881.dir/link.txt --verbose=1
+/usr/bin/cc -Wall -std=c99 -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=fseek64    -rdynamic CMakeFiles/cmTC_84881.dir/CheckFunctionExists.c.o  -o cmTC_84881 
+CMakeFiles/cmTC_84881.dir/CheckFunctionExists.c.o : Dans la fonction « main » :
+CheckFunctionExists.c:(.text+0x10) : référence indéfinie vers « fseek64 »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_84881.dir/build.make:97: recipe for target 'cmTC_84881' failed
+make[1]: *** [cmTC_84881] Error 1
+make[1] : on quitte le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_84881/fast' failed
+make: *** [cmTC_84881/fast] Error 2
+
+
+Determining if the function ftell64 exists failed with the following output:
+Change Dir: /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_472b2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_472b2.dir/build.make CMakeFiles/cmTC_472b2.dir/build
+make[1] : on entre dans le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_472b2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -Wall -std=c99 -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=ftell64   -o CMakeFiles/cmTC_472b2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_472b2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_472b2.dir/link.txt --verbose=1
+/usr/bin/cc -Wall -std=c99 -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=ftell64    -rdynamic CMakeFiles/cmTC_472b2.dir/CheckFunctionExists.c.o  -o cmTC_472b2 
+CMakeFiles/cmTC_472b2.dir/CheckFunctionExists.c.o : Dans la fonction « main » :
+CheckFunctionExists.c:(.text+0x10) : référence indéfinie vers « ftell64 »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_472b2.dir/build.make:97: recipe for target 'cmTC_472b2' failed
+make[1]: *** [cmTC_472b2] Error 1
+make[1] : on quitte le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_472b2/fast' failed
+make: *** [cmTC_472b2/fast] Error 2
+
+
+Determining if the function strcpy_s exists failed with the following output:
+Change Dir: /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0ba04/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ba04.dir/build.make CMakeFiles/cmTC_0ba04.dir/build
+make[1] : on entre dans le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_0ba04.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -Wall -std=c99 -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=strcpy_s   -o CMakeFiles/cmTC_0ba04.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0ba04
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ba04.dir/link.txt --verbose=1
+/usr/bin/cc -Wall -std=c99 -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=strcpy_s    -rdynamic CMakeFiles/cmTC_0ba04.dir/CheckFunctionExists.c.o  -o cmTC_0ba04 
+CMakeFiles/cmTC_0ba04.dir/CheckFunctionExists.c.o : Dans la fonction « main » :
+CheckFunctionExists.c:(.text+0x10) : référence indéfinie vers « strcpy_s »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0ba04.dir/build.make:97: recipe for target 'cmTC_0ba04' failed
+make[1]: *** [cmTC_0ba04] Error 1
+make[1] : on quitte le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_0ba04/fast' failed
+make: *** [cmTC_0ba04/fast] Error 2
+
+
+Determining if the function strcat_s exists failed with the following output:
+Change Dir: /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_58d54/fast"
+/usr/bin/make -f CMakeFiles/cmTC_58d54.dir/build.make CMakeFiles/cmTC_58d54.dir/build
+make[1] : on entre dans le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_58d54.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -Wall -std=c99 -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=strcat_s   -o CMakeFiles/cmTC_58d54.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_58d54
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58d54.dir/link.txt --verbose=1
+/usr/bin/cc -Wall -std=c99 -D_DEFAULT_SOURCE -DCHECK_FUNCTION_EXISTS=strcat_s    -rdynamic CMakeFiles/cmTC_58d54.dir/CheckFunctionExists.c.o  -o cmTC_58d54 
+CMakeFiles/cmTC_58d54.dir/CheckFunctionExists.c.o : Dans la fonction « main » :
+CheckFunctionExists.c:(.text+0x10) : référence indéfinie vers « strcat_s »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_58d54.dir/build.make:97: recipe for target 'cmTC_58d54' failed
+make[1]: *** [cmTC_58d54] Error 1
+make[1] : on quitte le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_58d54/fast' failed
+make: *** [cmTC_58d54/fast] Error 2
+
+
+Performing C SOURCE FILE Test HAVE_NDIR_H failed with the following output:
+Change Dir: /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fde2e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fde2e.dir/build.make CMakeFiles/cmTC_fde2e.dir/build
+make[1] : on entre dans le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_fde2e.dir/src.c.o
+/usr/bin/cc   -Wall -std=c99 -D_DEFAULT_SOURCE -DHAVE_NDIR_H   -o CMakeFiles/cmTC_fde2e.dir/src.c.o   -c /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/src.c
+/home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/src.c:1:10: fatal error: ndir.h: Aucun fichier ou dossier de ce type
+ #include <ndir.h>
+          ^~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_fde2e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_fde2e.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_fde2e.dir/src.c.o] Error 1
+make[1] : on quitte le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_fde2e/fast' failed
+make: *** [cmTC_fde2e/fast] Error 2
+
+Source file was:
+#include <ndir.h>
+
+int main(int argc, char *argv[])
+{
+  DIR* d = 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_SYS_NDIR_H failed with the following output:
+Change Dir: /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9d3d5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d3d5.dir/build.make CMakeFiles/cmTC_9d3d5.dir/build
+make[1] : on entre dans le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_9d3d5.dir/src.c.o
+/usr/bin/cc   -Wall -std=c99 -D_DEFAULT_SOURCE -DHAVE_SYS_NDIR_H   -o CMakeFiles/cmTC_9d3d5.dir/src.c.o   -c /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/src.c
+/home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp/src.c:1:10: fatal error: sys/ndir.h: Aucun fichier ou dossier de ce type
+ #include <sys/ndir.h>
+          ^~~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_9d3d5.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_9d3d5.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_9d3d5.dir/src.c.o] Error 1
+make[1] : on quitte le répertoire « /home/legaller/Logiciels/poppler-0.72.0/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_9d3d5/fast' failed
+make: *** [cmTC_9d3d5/fast] Error 2
+
+Source file was:
+#include <sys/ndir.h>
+
+int main(int argc, char *argv[])
+{
+  DIR* d = 0;
+  return 0;
+}
+
